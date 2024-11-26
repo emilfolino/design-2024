@@ -1,0 +1,12 @@
+$theme: 'light' !default;
+
+@use '_variables-light' as vl;
+@use '_variables-dark' as vd;
+
+$main-background-color: vl.$main-background-color !default;
+$main-font-color: vl.$main-font-color !default;
+
+@if $theme == 'dark' {
+    $main-background-color: vd.$main-background-color;
+    $main-font-color: vd.$main-font-color;
+}
