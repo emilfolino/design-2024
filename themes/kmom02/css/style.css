@@ -12,7 +12,7 @@
  *   | '-^ original load
  *   '
  *   kmom02/scss/container.scss 2:1  @use
- *   kmom02/scss/style.scss 4:1      root stylesheet */
+ *   kmom02/scss/style.scss 2:1      root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -22,5 +22,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: This module was already loaded, so it can't be configured using \"with\".\a   \250c \2500 \2500 > kmom02/scss/container.scss\a 2 \2502  \250c  @use \"variables\" as * with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ new load\a   \2575 \a   \250c \2500 \2500 > kmom02/scss/typography.scss\a 2 \2502  \250c  @use \"variables\" as v with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ original load\a   \2575 \a   kmom02/scss/container.scss 2:1  @use\a   kmom02/scss/style.scss 4:1      root stylesheet";
+  content: "Error: This module was already loaded, so it can't be configured using \"with\".\a   \250c \2500 \2500 > kmom02/scss/container.scss\a 2 \2502  \250c  @use \"variables\" as * with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ new load\a   \2575 \a   \250c \2500 \2500 > kmom02/scss/typography.scss\a 2 \2502  \250c  @use \"variables\" as v with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ original load\a   \2575 \a   kmom02/scss/container.scss 2:1  @use\a   kmom02/scss/style.scss 2:1      root stylesheet";
 }

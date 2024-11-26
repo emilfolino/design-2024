@@ -1,7 +1,5 @@
-$theme: "light" !default;
-
-@use 'typography' with ($theme: $theme);
-@use 'container' with ($theme: $theme);
+@use 'typography' with ($theme: "light");
+@use 'container' with ($theme: "light");
 
 @use 'header';
 @use 'footer';

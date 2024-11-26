@@ -1,7 +1,5 @@
-$theme: "dark";
-
-@use 'typography' with ($theme: $theme);
-@use 'container' with ($theme: $theme);
+@use 'typography' with ($theme: "dark");
+@use 'container' with ($theme: "dark");
 
 @use 'header';
 @use 'footer';
