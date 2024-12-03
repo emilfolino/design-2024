@@ -9,6 +9,12 @@ p {
   margin-bottom: 1.96rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -29,7 +35,7 @@ body {
   max-width: 64rem;
   padding: 2rem;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #333;
 }
 
 .header {

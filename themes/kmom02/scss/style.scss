@@ -1,5 +1,7 @@
-@use 'typography' with ($theme: "light");
-@use 'container' with ($theme: "light");
+@use 'variables' as *;
+
+@use 'typography';
+@use 'container';
 
 @use 'header';
 @use 'footer';

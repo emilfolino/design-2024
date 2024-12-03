@@ -1,26 +1,180 @@
-/* Error: This module was already loaded, so it can't be configured using "with".
- *   ,--> kmom02/scss/container.scss
- * 2 | / @use "variables" as * with (
- * 3 | |     $theme: $theme
- * 4 | | );
- *   | '-^ new load
- *   '
- *   ,--> kmom02/scss/typography.scss
- * 2 | / @use "variables" as v with (
- * 3 | |     $theme: $theme
- * 4 | | );
- *   | '-^ original load
- *   '
- *   kmom02/scss/container.scss 2:1  @use
- *   kmom02/scss/style.scss 2:1      root stylesheet */
+body {
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+p {
+  font-size: 1.4em;
+  margin-bottom: 1.96rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: [first] 20% [second] auto [third] 20% [end];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row-end];
+}
+
+.main {
+  grid-column: second/third;
+  grid-row: row2-start/row3-start;
+}
+
+.main {
+  width: 100%;
+  max-width: 64rem;
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.header {
+  grid-column: first/end;
+  grid-row: row1-start/row2-start;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #aaa;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 3rem;
+}
+
+.footer {
+  grid-column: first/end;
+  grid-row: row3-start/row-end;
+  display: grid;
+  grid-template-columns: [first] 20% [second] auto [third] 20% [end];
+  grid-template-rows: [row1-start] auto [row-end];
+  align-items: center;
+  padding: 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer-text {
+  grid-column: first/second;
+  grid-row: row1-start/row-end;
+}
+
+.social {
+  grid-column: third/end;
+  grid-row: row1-start/row-end;
+  justify-self: end;
+}
+.social a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 0.5em solid #f5f5f5;
+}
+
+code {
+  margin: 0 0.1em;
+  padding: 0.1em 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background: #f5f5f5;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.9824;
+}
+
+pre {
+  padding: 0 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background: #f5f5f5;
+}
+
+pre code {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: This module was already loaded, so it can't be configured using \"with\".\a   \250c \2500 \2500 > kmom02/scss/container.scss\a 2 \2502  \250c  @use \"variables\" as * with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ new load\a   \2575 \a   \250c \2500 \2500 > kmom02/scss/typography.scss\a 2 \2502  \250c  @use \"variables\" as v with (\a 3 \2502  \2502      $theme: $theme\a 4 \2502  \2502  );\a   \2502  \2514 \2500 ^ original load\a   \2575 \a   kmom02/scss/container.scss 2:1  @use\a   kmom02/scss/style.scss 2:1      root stylesheet";
+  margin: 0;
+  padding: 1.1111em 0;
+  border: 0 none;
+  background: transparent;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+
+.landing-page {
+  display: grid;
+  gap: 1.96rem 1.96rem;
+  margin-bottom: 1.96rem;
+}
+
+.landing-page h1 {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 1.96rem;
+}
+
+.box:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.technology .article {
+  width: 60%;
+}
+
+.technology .menu {
+  width: 30%;
+}
+
+table {
+  font-size: 1.4em;
+  margin-bottom: 1.96rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+table tr:nth-child(2n) {
+  background-color: #ddd;
+}
+table tbody > tr:hover {
+  background-color: #faa;
+}
+table td,
+table th {
+  padding: 4px 12px;
+}
+table th {
+  text-align: left;
+}
+table td {
+  border-top: 1px solid #ccc;
 }

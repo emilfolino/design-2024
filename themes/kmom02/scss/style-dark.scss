@@ -1,5 +1,10 @@
-@use 'typography' with ($theme: "dark");
-@use 'container' with ($theme: "dark");
+@use 'variables' as * with (
+    $main-background-color: #333,
+    $main-font-color: #fff
+);
+
+@use 'typography';
+@use 'container';
 
 @use 'header';
 @use 'footer';

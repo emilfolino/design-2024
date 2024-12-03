@@ -1,12 +1,9 @@
-$theme: 'light' !default;
-@use "variables" as v with (
-    $theme: $theme
-);
+@use 'variables' as *;
 
 body {
     line-height: 1.4;
     font-family: "Montserrat", sans-serif;
-    color: v.$main-font-color;
+    color: $main-font-color;
 }
 
 p {
